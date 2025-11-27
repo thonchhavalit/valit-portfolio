@@ -63,28 +63,14 @@ export default function About() {
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 BIOGRAPHY
               </h2>
-              <p className="font-medium ">
-                I'm Riley, a dedicated web developer at Stellar Innovations,
-                where I specialize in creating dynamic and user-centric web
-                experiences. With over a decade of experience in the industry, I
-                have honed my skills in both front-end and back-end
-                technologies, allowing me to deliver responsive and
-                high-performance websites and applications.
+              <p className="font-medium">
+                I’m Valit, a dedicated **Full-Stack Web Developer** at **Cambodia Air Traffic Services (CATS)**. I specialize in creating **dynamic, user-centric web applications**, building responsive, high-performance websites and backend systems using **HTML, CSS, JavaScript, React, Node.js and Spring Boot**.
               </p>
               <p className="my-4 font-medium">
-                At Stellar Innovations, I've had the opportunity to work on
-                numerous high-profile projects that have challenged and expanded
-                my expertise. My technical skill set includes HTML, CSS,
-                JavaScript, React, and Node.js, among other technologies. One of
-                my notable projects involved developing a comprehensive
-                e-commerce platform that streamlined the user experience and
-                significantly boosted the client's sales. Another project I’m
-                particularly proud of was creating an interactive web
-                application for a major event, which received widespread acclaim
-                for its intuitive design and seamless performance.
+                In my current role, I work on projects that **optimize operational workflows** and enhance user experience, combining front-end and back-end expertise to deliver **efficient, scalable solutions**. Previously, I worked as a **DevOps Developer** at **ISTAD**, focusing on **CI/CD pipelines, automation, and system optimization**.
               </p>
               <p className="my-4 font-medium">
-                P.s I'm a big fan of anime and not a real person ✌️.
+                Throughout my career, I’ve contributed to numerous projects that challenged and expanded my expertise. Notable achievements include developing a comprehensive e-commerce platform that streamlined the user experience and significantly boosted client sales, as well as creating interactive web applications with intuitive design and seamless performance. I am passionate about **continuous learning and innovation**, always striving to create impactful and reliable software solutions.
               </p>
             </div>
             <div

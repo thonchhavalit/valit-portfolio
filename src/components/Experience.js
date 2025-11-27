@@ -62,18 +62,19 @@ const Experience = () => {
             company="Cambodia Air Traffic Services"
             time="2024 - present"
             address="Phnom Penh, Cambodia"
-            companyLink="https://github.com/lilxyzz/clay-theme"
-            work="At Stellar Innovations, I serve as a web developer, where I play a crucial role in designing and implementing cutting-edge web solutions. My responsibilities include developing responsive and high-performance websites and applications using technologies such as HTML, CSS, JavaScript, React, and Node.js. I collaborate closely with cross-functional teams to ensure our projects meet the highest standards of functionality and user experience. One of my key achievements at Stellar Innovations has been leading the development of a comprehensive e-commerce platform that significantly enhanced our client's online presence and sales. My work is driven by a passion for continuous learning and innovation, always striving to push the boundaries of what's possible in web development."
+            companyLink="https://github.com/thonchhavalit"
+            work="At Cambodia Air Traffic Services, I serve as a web developer, designing and implementing cutting-edge web solutions. My responsibilities include developing responsive and high-performance websites and applications using HTML, CSS, JavaScript, React, and Node.js. I collaborate closely with cross-functional teams to ensure our projects meet the highest standards of functionality and user experience. One of my key achievements has been leading the development of a comprehensive e-commerce platform that significantly enhanced our client's online presence and sales. My work is driven by a passion for continuous learning and innovation, always striving to push the boundaries of what's possible in web development."
           />
 
           <Details
             position="DevOps Developer"
-            company="Institude of Science and Technology of Advanced Development"
+            company="Institute of Science and Technology of Advanced Development"
             time="2024 - 2024"
             address="Phnom Penh, Cambodia"
-            companyLink="https://github.com/lilxyzz/holo-theme"
-            work="At Vault Technologies, I worked as a RAD (Rapid Application Development) Tester, where I was responsible for ensuring the quality and functionality of our software applications during the development process. My role involved designing and executing test plans, identifying and documenting bugs, and working closely with developers to resolve issues quickly. This position required a deep understanding of the software development lifecycle and a keen eye for detail to ensure our applications met the highest standards of performance and reliability. My contributions at Vault Technologies helped streamline our development processes and significantly improved the overall quality of our software products."
+            companyLink="https://github.com/thonchhavalit"
+            work="At ISTAD, I worked as a DevOps Developer, where I was responsible for managing CI/CD pipelines, automating deployment processes, and ensuring system reliability and performance. I collaborated closely with development teams to optimize workflows, streamline processes, and implement robust solutions. My contributions helped improve the efficiency and quality of software delivery while maintaining high standards for system stability and scalability."
           />
+    
         </ul>
       </div>
       <div className="mt-40 flex items-center justify-between gap-3 grid-cols-2">

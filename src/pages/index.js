@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import TransitionEffect from "@/components/TransitionEffect";
-import profilePic from "../../public/images/profile/image.png";
+import profilePic from "../../public/images/profile/Valit-AI.JPG";
 
 export default function Home() {
   return (
@@ -39,20 +39,19 @@ export default function Home() {
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Hey, I’m Thon Chhavalit"
+                text="Hey, I’m Valit"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <div className="flex w-1/2 w-full items-center items-start lg:w-full  lg:!justify-center  sm:!justify-center  md:!text-center md:inline-block md:w-full">
                 <h2 className="animate-text bg-gradient-to-r from-lightGreen via-lightGreen to-slideGreen bg-clip-text text-transparent font-semibold capitalize !text-5xl xl:!text-4xl lg:!text-4xl md:!text-5xl sm:!text-3xl">
-                  I am Full-Stack Web Developer || DevOps Developer.
+                  I am a Full-Stack Web Developer with DevOps experience.
                 </h2>
               </div>
 
               <p className="my-4 text-base font-medium md:text-sm sm:!text-sm">
-                I'm a Full-Stack Web Developer at Stellar Innovations,
-                passionate about creating dynamic and user-friendly web
-                experiences. With a keen eye for design and a robust
-                understanding of both front-end and back-end technologies.
+                Currently, I work at Cambodia Air Traffic Service Co., Ltd. (CATS), where I build dynamic, user-friendly web applications that streamline aviation operations. I have a strong foundation in both front-end and back-end technologies, with a keen eye for design, usability, and scalable solutions.
+
+Previously, I worked as a DevOps Developer at ISTAD, gaining experience in automation, CI/CD pipelines, and system optimization. I enjoy combining my development and DevOps skills to deliver efficient, reliable, and innovative web solutions.
               </p>
               <div className="mt-2 flex items-center self-start gap-3 grid-cols-2 lg:self-center">
                 <Link

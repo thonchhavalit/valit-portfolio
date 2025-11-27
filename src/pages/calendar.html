@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phnom Penh Seasonal Calendar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    #season-container {
+      width: 280px;
+      padding: 15px;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+    }
+    #season-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    #season-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 5px 0;
+    }
+    #season-date {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 15px;
+    }
+    #weather-forecast {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    #weather-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .temperature-info {
+      font-weight: 600;
+    }
+    #git-icon a {
+      color: #333;
+      margin-left: 5px;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    #season-title[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      white-space: pre-line;
+      font-size: 0.75rem;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div id="season-container">
+    <div id="season-info">
+      <span id="season-title" data-tooltip="Hot Season.\nMarch - May\nDry and sunny days">Hot Season</span>
+      <p id="season-subtitle">Dry & Sunny</p>
+      <p id="season-date">March - May</p>
+    </div>
+
+    <div id="weather-forecast">
+      <img id="weather-icon" src="https://openweathermap.org/img/wn/01d.png" alt="Weather Icon">
+      <span id="temperature-info" class="temperature-info">32°C</span>
+    </div>
+
+    <div id="git-icon">
+      <a href="https://github.com/thonchhavalit" target="_blank" aria-label="Checkout my GitHub profile">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Automatically change season based on current month
+    const month = new Date().getMonth() + 1; // 1-12
+    const seasonTitle = document.getElementById('season-title');
+    const seasonSubtitle = document.getElementById('season-subtitle');
+    const seasonDate = document.getElementById('season-date');
+    const tempInfo = document.getElementById('temperature-info');
+    const weatherIcon = document.getElementById('weather-icon');
+
+    if (month >= 3 && month <= 5) {
+      // Hot Season
+      seasonTitle.textContent = 'Hot Season';
+      seasonTitle.setAttribute('data-tooltip', 'Hot Season.\nMarch - May\nDry and sunny days');
+      seasonSubtitle.textContent = 'Dry & Sunny';
+      seasonDate.textContent = 'March - May';
+      tempInfo.textContent = '32°C';
+      weatherIcon.src = 'https://openweathermap.org/img/wn/01d.png';
+    } else if (month >= 6 && month <= 10) {
+      // Rainy Season
+      seasonTitle.textContent = 'Rainy Season';
+      seasonTitle.setAttribute('data-tooltip', 'Rainy Season.\nJune - October\nHeavy rain and high humidity');
+      seasonSubtitle.textContent = 'Wet & Humid';
+      seasonDate.textContent = 'June - October';
+      tempInfo.textContent = '29°C';
+      weatherIcon.src = 'https://openweathermap.org/img/wn/09d.png';
+    } else {
+      // Cool Season
+      seasonTitle.textContent = 'Cool Season';
+      seasonTitle.setAttribute('data-tooltip', 'Cool Season.\nNovember - February\nCooler and dry');
+      seasonSubtitle.textContent = 'Dry & Mild';
+      seasonDate.textContent = 'November - February';
+      tempInfo.textContent = '27°C';
+      weatherIcon.src = 'https://openweathermap.org/img/wn/02d.png';
+    }
+  </script>
+</body>
+</html>
