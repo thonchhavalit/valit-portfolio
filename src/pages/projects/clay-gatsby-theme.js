@@ -35,20 +35,18 @@ function AnimatedNumberFramerMotion({ value }) {
   return <span ref={ref} />;
 }
 
-export default function About() {
+export default function ProjectNotice() {
   return (
     <>
       <Head>
         <link
           rel="canonical"
-          href="https://travislord.xyz/projects/clay-gatsby-theme"
+          href="/projects/clay-gatsby-theme"
         ></link>
-        <title>
-          Clay Theme | Unlocking The Power Of Gatsby V5+ | By Travis Lord
-        </title>
+        <title>Project Notice | VALIT PORTFOLIO</title>
         <meta
           name="description"
-          content="I am thrilled to share Clay Theme with the web development community! I have recently launched Clay Theme, a cutting-edge Gatsby Framework Template."
+          content="This project entry is archived while original projects are being prepared for publication."
         />
       </Head>
 
@@ -58,7 +56,7 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Clay - Gatsby Theme"
+            text="Project Entry Archived"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
@@ -68,31 +66,25 @@ export default function About() {
             md:col-span-8"
             >
               <h2 className="mb-4 text-2xl font-bold capitalize text-dark/75 dark:text-light/75">
-                Unlocking the Power of Gatsby v5+ & NetlifyCMS with Clay Theme.
+                This showcase is being updated.
               </h2>
               <h3 className="mb-4 text-lg font-bold  text-lightGreen dark:text-primaryDark">
-                Content | Web Design | UX/UI | Development
+                Portfolio | Update | In Progress
               </h3>
               <div classNname="w-full border-2 border-solid border-light bg-light"></div>
               <p className="">
-                I am thrilled to share some exciting news with the web
-                development community! I have recently launched a cutting-edge
-                Gatsby Framework Template called Clay, meticulously crafted to
-                seamlessly integrate with Netlify CMS, providing an effortless
-                and efficient solution for content management in the realm of
-                web development.
+                This page previously contained a template project entry that is
+                not part of my original portfolio work. I am currently replacing
+                these entries with projects that I personally built and can
+                publicly share.
               </p>
               <h4 className="mt-4 text-lg font-800 capitalize text-dark/75 dark:text-light/75">
-                Unleashing the Power of Gatsby Framework
+                Thanks for your patience.
               </h4>
               <p className="my-4">
-                At the heart of Clay lies the robust Gatsby Framework. This
-                innovative framework empowers developers to leverage the latest
-                web technologies, including React, GraphQL, and Webpack. The
-                outcome is nothing short of exceptional—Clay delivers
-                lightning-fast, highly optimized websites, waving goodbye to the
-                era of slow load times and ushering in an age of unparalleled
-                performance.
+                For verified work samples, please check my GitHub profile or
+                contact me directly. New project case studies will be published
+                here soon.
               </p>
 
               <div className="mt-2 flex items-center grid-cols-8 gap-4 sm:gap-8">
@@ -103,14 +95,14 @@ export default function About() {
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
             md:p-2 md:px-4 md:text-base"
-                  aria-label="Visit Theme Demo"
-                  href="https://clay-theme.netlify.app"
+                  aria-label="Visit GitHub"
+                  href="https://github.com/thonchhavalit"
                   target={"_blank"}
                 >
-                  Visit Demo
+                  Visit GitHub
                 </Link>
                 <Link
-                  href="https://github.com/lilxyzz/clay-theme"
+                  href="https://github.com/thonchhavalit"
                   target={"_blank"}
                   className="w-10"
                   aria-label="github link"
@@ -118,10 +110,10 @@ export default function About() {
                   <GithubIcon />
                 </Link>
                 <Link
-                  href="https://dev.to/lilxyzz/clay-theme-unlocking-the-power-of-gatsby-v5-and-netlifycms-with-clay-theme-njn"
-                  target={"_blank"}
+                  href="/projects/"
+                  target={"_self"}
                   className="w-10"
-                  aria-label="github link"
+                  aria-label="projects link"
                 >
                   <DevIcon />
                 </Link>

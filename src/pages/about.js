@@ -64,10 +64,10 @@ export default function About() {
                 BIOGRAPHY
               </h2>
               <p className="font-medium">
-                I’m Valit, a dedicated **Full-Stack Web Developer** at **Cambodia Air Traffic Services (CATS)**. I specialize in creating **dynamic, user-centric web applications**, building responsive, high-performance websites and backend systems using **HTML, CSS, JavaScript, React, Node.js and Spring Boot**.
+                I’m Valit, a dedicated **Backend Developer** at **Wing Bank**. I specialize in building **scalable, reliable backend systems** and modern web applications using **Node.js, Java, Spring Boot, React, and JavaScript**.
               </p>
               <p className="my-4 font-medium">
-                In my current role, I work on projects that **optimize operational workflows** and enhance user experience, combining front-end and back-end expertise to deliver **efficient, scalable solutions**. Previously, I worked as a **DevOps Developer** at **ISTAD**, focusing on **CI/CD pipelines, automation, and system optimization**.
+                In my current role, I work on projects that **optimize financial workflows** and system performance, delivering **secure and scalable backend solutions**. Previously, I worked as a **System Programming Officer** at **Cambodia Air Traffic Services (CATS)** and as a **DevOps Developer** at **ISTAD**, focusing on **web development, CI/CD pipelines, automation, and system optimization**.
               </p>
               <p className="my-4 font-medium">
                 Throughout my career, I’ve contributed to numerous projects that challenged and expanded my expertise. Notable achievements include developing a comprehensive e-commerce platform that streamlined the user experience and significantly boosted client sales, as well as creating interactive web applications with intuitive design and seamless performance. I am passionate about **continuous learning and innovation**, always striving to create impactful and reliable software solutions.

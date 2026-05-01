@@ -49,9 +49,9 @@ export default function Home() {
               </div>
 
               <p className="my-4 text-base font-medium md:text-sm sm:!text-sm">
-                Currently, I work at Cambodia Air Traffic Service Co., Ltd. (CATS), where I build dynamic, user-friendly web applications that streamline aviation operations. I have a strong foundation in both front-end and back-end technologies, with a keen eye for design, usability, and scalable solutions.
+                Currently, I work at Wing Bank as a Backend Developer, where I build scalable and reliable backend systems for modern financial services. I have a strong foundation in both front-end and back-end technologies, with a keen eye for design, usability, and scalable solutions.
 
-Previously, I worked as a DevOps Developer at ISTAD, gaining experience in automation, CI/CD pipelines, and system optimization. I enjoy combining my development and DevOps skills to deliver efficient, reliable, and innovative web solutions.
+Previously, I worked at Cambodia Air Traffic Services (CATS) as a System Programming Officer and at ISTAD as a DevOps Developer, gaining experience in web development, automation, CI/CD pipelines, and system optimization. I enjoy combining my development and DevOps skills to deliver efficient, reliable, and innovative web solutions.
               </p>
               <div className="mt-2 flex items-center self-start gap-3 grid-cols-2 lg:self-center">
                 <Link

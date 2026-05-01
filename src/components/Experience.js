@@ -58,12 +58,21 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="System Programming Officer"
-            company="Cambodia Air Traffic Services"
-            time="2024 - present"
+            position="Backend Developer"
+            company="Wing Bank"
+            time="2026 - present"
             address="Phnom Penh, Cambodia"
             companyLink="https://github.com/thonchhavalit"
-            work="At Cambodia Air Traffic Services, I serve as a web developer, designing and implementing cutting-edge web solutions. My responsibilities include developing responsive and high-performance websites and applications using HTML, CSS, JavaScript, React, and Node.js. I collaborate closely with cross-functional teams to ensure our projects meet the highest standards of functionality and user experience. One of my key achievements has been leading the development of a comprehensive e-commerce platform that significantly enhanced our client's online presence and sales. My work is driven by a passion for continuous learning and innovation, always striving to push the boundaries of what's possible in web development."
+            work="At Wing Bank, I work as a Backend Developer, designing and implementing secure, high-performance backend services for modern financial products. My responsibilities include building APIs, optimizing system performance, and collaborating with cross-functional teams to deliver reliable and scalable solutions."
+          />
+
+          <Details
+            position="System Programming Officer"
+            company="Cambodia Air Traffic Services"
+            time="2024 - 2026"
+            address="Phnom Penh, Cambodia"
+            companyLink="https://github.com/thonchhavalit"
+            work="At Cambodia Air Traffic Services, I worked as a web developer, designing and implementing modern web solutions for operational teams. My responsibilities included developing responsive, high-performance applications and collaborating with cross-functional teams to deliver scalable and user-focused systems."
           />
 
           <Details
