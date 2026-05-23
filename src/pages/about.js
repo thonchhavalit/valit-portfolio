@@ -38,11 +38,26 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About NexTemp</title>
+        <title>About Valit | Full-Stack Developer Journey & Experience</title>
         <meta
           name="description"
-          content="NexTemp, A open-source portfolio theme built with Nextjs"
+          content="Learn about Valit's journey as a Backend Developer at Wing Bank, with experience in Node.js, Java, Spring Boot, DevOps, and building scalable web applications. Previously at CATS and ISTAD."
         />
+        <meta name="keywords" content="About Valit, Backend Developer, Wing Bank, CATS, ISTAD, DevOps Developer, Web Development Career, Software Engineer Biography" />
+        <link rel="canonical" href="https://valit-portfolio.vercel.app/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://valit-portfolio.vercel.app/about" />
+        <meta property="og:title" content="About Valit | Full-Stack Developer Journey" />
+        <meta property="og:description" content="Backend Developer at Wing Bank specializing in scalable backend systems, with experience in Node.js, Java, Spring Boot, and DevOps." />
+        <meta property="og:image" content="https://valit-portfolio.vercel.app/images/profile/image.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Valit | Full-Stack Developer" />
+        <meta name="twitter:description" content="Backend Developer at Wing Bank with expertise in scalable systems and modern web technologies." />
+        <meta name="twitter:image" content="https://valit-portfolio.vercel.app/images/profile/image.png" />
       </Head>
 
       <TransitionEffect />

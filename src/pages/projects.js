@@ -87,10 +87,39 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects | VALIT PORTFOLIO</title>
+        <title>Projects | Valit's Full-Stack & Backend Development Portfolio</title>
         <meta
           name="description"
-          content="Explore featured projects by Valit, including full-stack and backend development work."
+          content="Explore Valit's portfolio of full-stack and backend development projects, featuring scalable web applications built with Node.js, Java, Spring Boot, React, and modern DevOps practices."
+        />
+        <meta name="keywords" content="Web Development Projects, Backend Projects, Full-Stack Portfolio, Node.js Applications, React Projects, Spring Boot, DevOps Projects" />
+        <link rel="canonical" href="https://valit-portfolio.vercel.app/projects" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://valit-portfolio.vercel.app/projects" />
+        <meta property="og:title" content="Projects | Valit's Development Portfolio" />
+        <meta property="og:description" content="Browse through innovative web development projects showcasing expertise in full-stack and backend development." />
+        <meta property="og:image" content="https://valit-portfolio.vercel.app/images/projects/featured-project.jpg" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Projects | Valit's Portfolio" />
+        <meta name="twitter:description" content="Innovative web development projects featuring full-stack and backend solutions." />
+        <meta name="twitter:image" content="https://valit-portfolio.vercel.app/images/projects/featured-project.jpg" />
+        
+        {/* JSON-LD for ItemList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "Valit's Projects",
+              "description": "Portfolio of full-stack and backend development projects",
+              "url": "https://valit-portfolio.vercel.app/projects"
+            })
+          }}
         />
       </Head>
 
@@ -132,16 +161,17 @@ export default function Projects() {
                 >
                   Visit GitHub
                 </Link>
-                <Link
-                  href="/contact/"
-                  target={"_self"}
+                <a
+                  href="https://t.me/Thon_Chhavalit"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-lg bg-light p-2 px-6 text-lg font-semibold border-2 border-solid
                   capitalize text-dark hover:border-light hover:bg-dark hover:text-light
                   dark:bg-dark dark:text-light dark:hover:bg-light dark:hover:text-dark
                   md:p-2 md:px-4 md:text-base"
                 >
                   Contact Me
-                </Link>
+                </a>
               </div>
             </article>
           </div>

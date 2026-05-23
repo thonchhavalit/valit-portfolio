@@ -127,7 +127,7 @@ const Navbar = () => {
             <GithubIcon />
           </motion.a>
 
-          <motion.a
+          {/* <motion.a
             target={"_blank"}
             className="w-7 mx-3 bg-light rounded-full"
             href="https://medium.com/@travis.lord"
@@ -147,7 +147,7 @@ const Navbar = () => {
             aria-label="Checkout my Dev.to profile"
           >
             <DevIcon />
-          </motion.a>
+          </motion.a> */}
 
           <motion.a
             target={"_blank"}
@@ -207,12 +207,16 @@ const Navbar = () => {
               href="/articles"
               title="Articles"
             />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="ml-4 lg:m-0 lg:my-2"
-              href="/contact"
-              title="Contact"
-            />
+            <motion.a
+              target="_blank"
+              className="ml-4 lg:m-0 lg:my-2 text-light dark:text-dark"
+              href="https://t.me/Thon_Chhavalit"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={handleClick}
+            >
+              Contact
+            </motion.a>
           </nav>
           <nav
             className="flex items-center justify-center  mt-2
@@ -221,42 +225,13 @@ const Navbar = () => {
             <motion.a
               target={"_blank"}
               className="w-6 mr-3"
-              href="https://github.com/lilxyzz"
+              href="https://github.com/thonchhavalit"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Checkout my Github profile"
             >
               <GithubIcon />
             </motion.a>
-
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full"
-              href="https://medium.com/@travis.lord"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my Medium profile"
-            >
-              <MediumIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my Dev.to profile"
-            >
-              <DevIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="My Dev.to profile"
-            ></motion.a>
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}

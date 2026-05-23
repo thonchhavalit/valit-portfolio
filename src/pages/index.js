@@ -11,10 +11,64 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>VALIT PORTFOLIO</title>
+        <title>Valit - Full-Stack Web Developer | Backend & DevOps Expert</title>
         <meta
           name="description"
-          content="Next Portfolio, A open-source portfolio theme built with Nextjs"
+          content="Valit is a Full-Stack Web Developer at Wing Bank, specializing in scalable backend systems, Node.js, Java, Spring Boot, React, and DevOps. Explore my portfolio of innovative web solutions."
+        />
+        <meta name="keywords" content="Full-Stack Developer, Backend Developer, DevOps, Node.js, Java, Spring Boot, React, Web Development, Software Engineer, Valit, Wing Bank, Cambodia" />
+        <meta name="author" content="Thon Chhavalit" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://valit-portfolio.vercel.app/" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://valit-portfolio.vercel.app/" />
+        <meta property="og:title" content="Valit - Full-Stack Web Developer | Backend & DevOps Expert" />
+        <meta property="og:description" content="Full-Stack Web Developer specializing in scalable backend systems, Node.js, Java, Spring Boot, React, and DevOps solutions." />
+        <meta property="og:image" content="https://valit-portfolio.vercel.app/images/profile/Valit-AI.JPG" />
+        <meta property="og:site_name" content="Valit Portfolio" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://valit-portfolio.vercel.app/" />
+        <meta name="twitter:title" content="Valit - Full-Stack Web Developer" />
+        <meta name="twitter:description" content="Full-Stack Web Developer specializing in scalable backend systems and modern web applications." />
+        <meta name="twitter:image" content="https://valit-portfolio.vercel.app/images/profile/Valit-AI.JPG" />
+        
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Thon Chhavalit",
+              "alternateName": "Valit",
+              "url": "https://valit-portfolio.vercel.app",
+              "image": "https://valit-portfolio.vercel.app/images/profile/Valit-AI.JPG",
+              "jobTitle": "Backend Developer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Wing Bank"
+              },
+              "sameAs": [
+                "https://github.com/thonchhavalit",
+                "https://t.me/Thon_Chhavalit"
+              ],
+              "knowsAbout": [
+                "Full-Stack Development",
+                "Backend Development",
+                "DevOps",
+                "Node.js",
+                "Java",
+                "Spring Boot",
+                "React",
+                "JavaScript"
+              ]
+            })
+          }}
         />
       </Head>
 

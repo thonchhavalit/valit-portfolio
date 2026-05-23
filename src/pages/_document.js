@@ -3,8 +3,12 @@ import Script from "next/script";
 
 export default function Document() {
   return (
-    <Html lang="en-AU">
-      <Head />
+    <Html lang="en">
+      <Head>
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#000000" />
+      </Head>
       <body className="bg-light dark:bg-dark">
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`
