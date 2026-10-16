@@ -72,11 +72,11 @@ const Experience = () => {
           />
 
           <Details
-            position="DevOps Developer"
+            position="DevOps Engineer"
             company="Institute of Science and Technology of Advanced Development"
             time="2024 - 2024"
             address="Phnom Penh, Cambodia"
-            work="At ISTAD, I worked as a DevOps Developer, where I was responsible for managing CI/CD pipelines, automating deployment processes, and ensuring system reliability and performance. I collaborated closely with development teams to optimize workflows, streamline processes, and implement robust solutions. My contributions helped improve the efficiency and quality of software delivery while maintaining high standards for system stability and scalability."
+            work="At ISTAD, I worked as a DevOps Engineer, where I was responsible for managing CI/CD pipelines, automating deployment processes, and ensuring system reliability and performance. I collaborated closely with development teams to optimize workflows, streamline processes, and implement robust solutions. My contributions helped improve the efficiency and quality of software delivery while maintaining high standards for system stability and scalability."
           />
         </ul>
       </div>
