@@ -17,9 +17,6 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://api.openweathermap.org"></link>
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com"></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </Head>
       <main
         className={`${montserrat.variable} font-mont  bg-light dark:bg-dark w-full min-h-screen h-full`}

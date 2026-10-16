@@ -1,218 +1,75 @@
-import AnimatedText from "@/components/AnimatedText";
-import Layout from "@/components/Layout";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
-import { HireMe2 } from "@/components/HireMe2";
-
-import loading from "../../public/images/articles/GTA6-VICE.gif";
-
+import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
-import { motion, useMotionValue } from "framer-motion";
 
-const FramerImage = motion(Image);
-
-const MovingImg = ({ title, img, link }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const imgRef = useRef(null);
-
-  function handleMouse(event) {
-    imgRef.current.style.display = "inline-block";
-    x.set(event.pageX);
-    y.set(-10);
-  }
-
-  function handleMouseLeave(event) {
-    imgRef.current.style.display = "none";
-    x.set(0);
-    y.set(0);
-  }
-  return (
-    <>
-      <Link
-        href={link}
-        target={"_blank"}
-        className="relative"
-        onMouseMove={handleMouse}
-        onMouseLeave={handleMouseLeave}
-      >
-        <h2 className="capitalize text-xl font-semibold hover:underline dark:text-light md:text-lg xs:text-base sm:self-start">
-          {title}
-        </h2>
-        <FramerImage
-          src={img}
-          ref={imgRef}
-          alt={title}
-          className="w-96 h-auto z-10 hidden absolute rounded-lg md:!hidden"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
-          style={{
-            x: x,
-            y: y,
-          }}
-          sizes="(max-width: 768px) 60vw,
-              (max-width: 1200px) 40vw,
-              33vw"
-        />
-      </Link>
-    </>
-  );
-};
-
-const Article = ({ img, title, date, link }) => {
-  return (
-    <motion.li
-      initial={{ y: 200 }}
-      whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
-      viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-2 rounded-xl flex sm:flex-col justify-between 
-      bg-light text-dark first:mt-0 border border-solid border-dark
-      border-r-4 border-b-4 dark:bg-dark dark:border-light
-      "
-    >
-      <MovingImg img={img} title={title} link={link} />
-      <span
-        className="text-primary font-semibold dark:text-primaryDark min-w-max pl-4 sm:self-start 
-      sm:pl-0 xs:text-sm"
-      >
-        {date}
-      </span>
-    </motion.li>
-  );
-};
+const areas = [
+  "Backend services and APIs",
+  "DevOps, CI/CD, and automation",
+  "Web applications and system tools",
+];
 
 export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects | Valit's Full-Stack & Backend Development Portfolio</title>
+        <title>Work | Thon Chhavalit</title>
         <meta
           name="description"
-          content="Explore Valit's portfolio of full-stack and backend development projects, featuring scalable web applications built with Node.js, Java, Spring Boot, React, and modern DevOps practices."
+          content="Explore Thon Chhavalit's backend, DevOps, and web development work."
         />
-        <meta name="keywords" content="Web Development Projects, Backend Projects, Full-Stack Portfolio, Node.js Applications, React Projects, Spring Boot, DevOps Projects" />
         <link rel="canonical" href="https://valit-portfolio.vercel.app/projects" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://valit-portfolio.vercel.app/projects" />
-        <meta property="og:title" content="Projects | Valit's Development Portfolio" />
-        <meta property="og:description" content="Browse through innovative web development projects showcasing expertise in full-stack and backend development." />
-        <meta property="og:image" content="https://valit-portfolio.vercel.app/images/projects/featured-project.jpg" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Projects | Valit's Portfolio" />
-        <meta name="twitter:description" content="Innovative web development projects featuring full-stack and backend solutions." />
-        <meta name="twitter:image" content="https://valit-portfolio.vercel.app/images/projects/featured-project.jpg" />
-        
-        {/* JSON-LD for ItemList */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "CollectionPage",
-              "name": "Valit's Projects",
-              "description": "Portfolio of full-stack and backend development projects",
-              "url": "https://valit-portfolio.vercel.app/projects"
-            })
-          }}
-        />
       </Head>
 
       <TransitionEffect />
-      <main
-        className={`mb-16  flex w-full flex-col items-center justify-center dark:text-light`}
-      >
-        <Layout className="pt-16">
-          <AnimatedText
-            text="Imagination Transforms the World ✨"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-          />
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <article
-              className="col-span-12 relative flex w-full flex-col items-start justify-between rounded-3xl rounded-br-2xl border
-              border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
-            >
-              <div
-                className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark
-                dark:bg-light xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]"
-              />
-              <span className="text-xl font-medium text-primary dark:text-light xs:text-base">
-                Portfolio Update
-              </span>
-              <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
-                Original Projects Are Being Added
-              </h2>
-              <p className="my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
-                This section is being refreshed to include only projects built by me. I am currently preparing and documenting my original backend and full-stack work for publication.
-              </p>
-              <div className="mt-4 flex items-center gap-4">
-                <Link
-                  href="https://github.com/thonchhavalit"
-                  target={"_blank"}
-                  className="rounded-lg bg-dark p-2 px-6 text-lg font-semibold border-2 border-solid
-                  capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark
-                  dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-                  md:p-2 md:px-4 md:text-base"
-                >
-                  Visit GitHub
-                </Link>
-                <a
-                  href="https://t.me/Thon_Chhavalit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg bg-light p-2 px-6 text-lg font-semibold border-2 border-solid
-                  capitalize text-dark hover:border-light hover:bg-dark hover:text-light
-                  dark:bg-dark dark:text-light dark:hover:bg-light dark:hover:text-dark
-                  md:p-2 md:px-4 md:text-base"
-                >
-                  Contact Me
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div>
-            <ul className="flex flex-col items-center relative pt-16">
-              <Article
-                title="Adding more soon, thanks for the interest!"
-                img={loading}
-                time="1 min read"
-                date=""
-                link="https://github.com/thonchhavalit"
-              />
-            </ul>
-
-            <div className="mt-2 flex items-center justify-between gap-3 grid-cols-2">
-              <Link
-                href="/articles/"
-                target={"_self"}
-                className={`flex items-center rounded-lg border-2 border-solid bg-light p-2.5 px-6 text-lg font-semibold
-            capitalize text-dark hover:border-light hover:bg-dark hover:text-light 
-            dark:bg-dark dark:text-light dark:hover:bg-light dark:hover:text-dark
-            md:p-2 md:px-4 md:text-base
-             `}
+      <main className="text-dark dark:text-light">
+        <Layout className="pb-24 pt-16 md:pb-16 md:pt-12">
+          <section className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary dark:text-primaryDark">
+              Projects
+            </p>
+            <h1 className="mt-3 text-5xl font-bold tracking-tight sm:text-4xl">
+              Case studies are in progress
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-dark/65 dark:text-light/65">
+              I’m preparing project write-ups that show the problem, the
+              engineering approach, and the outcome. In the meantime, GitHub is
+              the best place to explore my public code.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="https://github.com/thonchhavalit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-dark px-6 py-3 text-sm font-semibold text-light transition-colors hover:bg-primary dark:bg-light dark:text-dark dark:hover:bg-primaryDark"
               >
-                View Articles
-              </Link>
+                Visit my GitHub
+              </a>
               <Link
-                href="/about/"
-                target={"_self"}
-                className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
-            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base
-             `}
+                href="/about"
+                className="rounded-full border border-dark/15 px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary dark:border-light/20 dark:hover:border-primaryDark dark:hover:text-primaryDark"
               >
-                Get To Know Me
+                View my experience
               </Link>
             </div>
-            <HireMe2 />
-          </div>
+          </section>
+
+          <section className="mt-16 border-t border-dark/10 pt-10 dark:border-light/10">
+            <h2 className="text-xl font-bold">Areas of focus</h2>
+            <ul className="mt-6 grid grid-cols-3 gap-4 md:grid-cols-1">
+              {areas.map((area, index) => (
+                <li
+                  key={area}
+                  className="rounded-2xl border border-dark/10 p-6 dark:border-light/10"
+                >
+                  <span className="text-sm font-semibold text-primary dark:text-primaryDark">
+                    0{index + 1}
+                  </span>
+                  <p className="mt-4 font-semibold">{area}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
         </Layout>
       </main>
     </>

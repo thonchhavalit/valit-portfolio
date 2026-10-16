@@ -1,31 +1,31 @@
-import Link from "next/link";
-import React from "react";
 import Layout from "./Layout";
 
-const Footer = () => {
-  return (
-    <footer
-      className="w-full border-t-0 border-solid border-dark
-    font-base text-lg dark:text-light dark:border-light sm:text-base
-    "
-    >
-      <Layout className="py-8 flex items-center justify-center lg:flex-col lg:py-6">
-        <span>&copy; {new Date().getFullYear()}</span>
-
-        <div className="flex items-center lg:py-2 ml-2">
-          Built <span className="text-2xl px-1"></span>
-          {""}
-          by&nbsp;
-          <Link
-            href="https://travislord.xyz/"
-            className="underline underline-offset-2"
-          >
-            Thon Chhavalit
-          </Link>
-        </div>
-      </Layout>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer className="border-t border-dark/10 dark:border-light/10">
+    <Layout className="flex items-center justify-between py-6 text-sm text-dark/55 dark:text-light/55 sm:flex-col sm:items-start sm:gap-3">
+      <span>
+        © {new Date().getFullYear()} Thon Chhavalit. Built with care.
+      </span>
+      <div className="flex items-center gap-5">
+        <a
+          href="https://github.com/thonchhavalit"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors hover:text-primary dark:hover:text-primaryDark"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://t.me/Thon_Chhavalit"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors hover:text-primary dark:hover:text-primaryDark"
+        >
+          Contact
+        </a>
+      </div>
+    </Layout>
+  </footer>
+);
 
 export default Footer;

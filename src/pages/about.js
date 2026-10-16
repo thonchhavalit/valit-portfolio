@@ -1,156 +1,68 @@
-import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profile from "../../public/images/profile/image.png";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
-import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
-import { HireMe2 } from "@/components/HireMe2";
-
-function AnimatedNumberFramerMotion({ value }) {
-  const ref = useRef(null);
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, { once: true });
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [motionValue, value, isInView]);
-
-  useEffect(
-    () =>
-      springValue.on("change", (latest) => {
-        if (ref.current && latest.toFixed(0) <= value) {
-          ref.current.textContent = latest.toFixed(0);
-        }
-      }),
-    [springValue, value]
-  );
-
-  return <span ref={ref} />;
-}
+import profile from "../../public/images/profile/image.png";
 
 export default function About() {
   return (
     <>
       <Head>
-        <title>About Valit | Full-Stack Developer Journey & Experience</title>
+        <title>About Valit | Thon Chhavalit</title>
         <meta
           name="description"
-          content="Learn about Valit's journey as a Backend Developer at Wing Bank, with experience in Node.js, Java, Spring Boot, DevOps, and building scalable web applications. Previously at CATS and ISTAD."
+          content="Learn about Thon Chhavalit's backend development, system programming, and DevOps experience."
         />
-        <meta name="keywords" content="About Valit, Backend Developer, Wing Bank, CATS, ISTAD, DevOps Developer, Web Development Career, Software Engineer Biography" />
         <link rel="canonical" href="https://valit-portfolio.vercel.app/about" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://valit-portfolio.vercel.app/about" />
-        <meta property="og:title" content="About Valit | Full-Stack Developer Journey" />
-        <meta property="og:description" content="Backend Developer at Wing Bank specializing in scalable backend systems, with experience in Node.js, Java, Spring Boot, and DevOps." />
-        <meta property="og:image" content="https://valit-portfolio.vercel.app/images/profile/image.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Valit | Full-Stack Developer" />
-        <meta name="twitter:description" content="Backend Developer at Wing Bank with expertise in scalable systems and modern web technologies." />
-        <meta name="twitter:image" content="https://valit-portfolio.vercel.app/images/profile/image.png" />
       </Head>
 
       <TransitionEffect />
-      <main
-        className={`flex  w-full flex-col items-center justify-center dark:text-light`}
-      >
-        <Layout className="pt-16">
-          <AnimatedText
-            text="Let Passion Lead Your Purpose 🔥"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
-          />
-
-          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-            <div
-              className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
-            md:col-span-8"
-            >
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                BIOGRAPHY
-              </h2>
-              <p className="font-medium">
-                I’m Valit, a dedicated **Backend Developer** at **Wing Bank**. I specialize in building **scalable, reliable backend systems** and modern web applications using **Node.js, Java, Spring Boot, React, and JavaScript**.
-              </p>
-              <p className="my-4 font-medium">
-                In my current role, I work on projects that **optimize financial workflows** and system performance, delivering **secure and scalable backend solutions**. Previously, I worked as a **System Programming Officer** at **Cambodia Air Traffic Services (CATS)** and as a **DevOps Developer** at **ISTAD**, focusing on **web development, CI/CD pipelines, automation, and system optimization**.
-              </p>
-              <p className="my-4 font-medium">
-                Throughout my career, I’ve contributed to numerous projects that challenged and expanded my expertise. Notable achievements include developing a comprehensive e-commerce platform that streamlined the user experience and significantly boosted client sales, as well as creating interactive web applications with intuitive design and seamless performance. I am passionate about **continuous learning and innovation**, always striving to create impactful and reliable software solutions.
-              </p>
-            </div>
-            <div
-              className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
-            bg-light p-8 dark:border-light dark:bg-dark
-            xl:col-span-4 md:col-span-8 md:order-1
-            "
-            >
-              <div
-                className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%]  rounded-[2rem] rounded-br-3xl 
-                bg-dark
-        dark:bg-light  "
-              />
+      <main className="text-dark dark:text-light">
+        <Layout className="pb-20 pt-14 md:pb-14 md:pt-10">
+          <section className="grid grid-cols-[0.8fr_1.2fr] items-center gap-14 md:grid-cols-1 md:gap-8">
+            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-[1.75rem] border border-dark/10 shadow-xl shadow-dark/10 dark:border-light/10">
               <Image
-                className="h-auto w-full rounded-2xl border-2 border-solid border-dark"
-                priority={true}
                 src={profile}
-                alt="Travis Lord"
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                alt="Thon Chhavalit"
+                priority
+                className="aspect-[4/5] w-full object-cover object-center"
+                sizes="(max-width: 768px) 80vw, 380px"
               />
             </div>
-            <div
-              className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
-            xl:items-center md:order-3"
-            >
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={1870} />+
-                </span>
-                <h3
-                  className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm"
-                >
-                  Days of Coding
-                </h3>
-              </div>
 
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={500} />
-                </span>
-                <h3
-                  className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm"
-                >
-                  Bugs Made
-                </h3>
-              </div>
-
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={499} />
-                </span>
-                <h3
-                  className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm"
-                >
-                  Bugs Crushed
-                </h3>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary dark:text-primaryDark">
+                About me
+              </p>
+              <h1 className="mt-3 text-5xl font-bold tracking-tight sm:text-4xl">
+                Thon Chhavalit
+              </h1>
+              <p className="mt-2 text-xl font-medium text-dark/55 dark:text-light/55">
+                Valit · Backend developer
+              </p>
+              <div className="mt-7 space-y-4 text-base leading-7 text-dark/70 dark:text-light/70">
+                <p>
+                  I’m a backend developer at Wing Bank, where I build services
+                  for financial products with a focus on reliability, security,
+                  and performance.
+                </p>
+                <p>
+                  My experience also includes system programming at Cambodia
+                  Air Traffic Services and DevOps work at ISTAD. Those roles
+                  gave me a practical view of the full software lifecycle—from
+                  building applications and APIs to automating delivery and
+                  supporting systems in production.
+                </p>
+                <p>
+                  I enjoy solving operational problems with simple, dependable
+                  software and continuing to grow across backend engineering
+                  and platform work.
+                </p>
               </div>
             </div>
-            <HireMe2 />
-          </div>
+          </section>
 
           <Skills />
           <Experience />

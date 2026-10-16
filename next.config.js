@@ -8,6 +8,21 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
 
+  async redirects() {
+    return [
+      {
+        source: '/articles/:path*',
+        destination: '/projects',
+        permanent: true,
+      },
+      {
+        source: '/projects/clay-gatsby-theme',
+        destination: '/projects',
+        permanent: true,
+      },
+    ];
+  },
+
   // SEO enhancements
   async headers() {
     return [

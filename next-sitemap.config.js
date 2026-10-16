@@ -28,7 +28,6 @@ module.exports = {
       "/": 1.0,
       "/about": 0.9,
       "/projects": 0.9,
-      "/articles": 0.8,
     };
 
     return {
